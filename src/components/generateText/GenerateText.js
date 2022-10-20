@@ -2,18 +2,30 @@ import { useState } from 'react';
 
 import './GenerateText.scss';
 
-const GenerateText = ({letter}) => {
-    const [listWords, setListWords] = useState([
-        "Lorem ", "ipsum ", "dolor ", "sit ", "amet ", "consectetur ", "adipisicing ", "elit. ", "Quis ", "voluptates ", "fugiat ", "repellat ", "beatae ", "eum ", "doloribus ", "aliquid ", "aspernatur ", "nihil ", "earum, ", "molestiae ", "velit ", "at ", "totam ", "accusantium maiores, ", "hic", "vel ", "architecto ", "facere ", "quidem?"
-    ]);
+const GenerateText = ({cntLetter}) => {
+    const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque modi alias ut voluptatibus eum omnis quia porro nesciunt possimus expedita harum odio asperiores nulla, iusto pariatur unde beatae voluptas?";
 
+    const [begginText, setBegginText] = useState(text)
+    const [listWords, setListWords] = useState(text.split(""));
+
+    console.log(listWords);
+
+    const current = 0;
     function checkWord() {
         
     }
 
+    function renderDigit() {
+        return listWords.map((val, index) => {
+            return <span key={index}>{val}</span>
+        });
+    }
+
+    const words = renderDigit();
+
     return (
-        <div class="generatorText">
-            <p class="generator">{listWords.join(" ")}</p>
+        <div className="generatorText">
+            <p className="generator">{words}</p>
         </div>
     );
 }
