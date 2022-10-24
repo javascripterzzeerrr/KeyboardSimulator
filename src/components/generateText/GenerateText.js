@@ -5,15 +5,8 @@ import './GenerateText.scss';
 const GenerateText = ({cntLetter}) => {
     const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque modi alias ut voluptatibus eum omnis quia porro nesciunt possimus expedita harum odio asperiores nulla, iusto pariatur unde beatae voluptas?";
 
-    const [begginText, setBegginText] = useState(text)
+    const [begginText, setBegginText] = useState(text);
     const [listWords, setListWords] = useState(text.split(""));
-
-    console.log(listWords);
-
-    const current = 0;
-    function checkWord() {
-        
-    }
 
     function renderDigit() {
         return listWords.map((val, index) => {

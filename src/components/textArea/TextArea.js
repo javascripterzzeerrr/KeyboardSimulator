@@ -2,18 +2,20 @@ import { useState } from 'react';
 
 import './TextArea.scss';
 
-const TextArea = ({onChangeLetter, keyBoardsState}) => {
+const TextArea = ({onChangeLetterInput, keyBoardsState, isValidSymbol}) => {
     const [value, setValue] = useState("");
 
     const onPressBoard = (event) => {
         keyBoardsState(event.code); // example return KeyX
-        console.log(event.code);
+        // console.log(event.code);
     };
 
     const onValueText = (e) => {
         let trgt = e.target.value;
-        onChangeLetter(trgt);
-        setValue(trgt);
+        onChangeLetterInput(trgt);
+        if (isValidSymbol) {
+            setValue(trgt);
+        }
     };
 
     return (

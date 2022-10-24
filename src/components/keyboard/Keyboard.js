@@ -5,16 +5,12 @@ import './Keyboard.scss';
 const Keyboard = (props) => {
     const {keyBoardValue} = props;
 
-    console.log(typeof keyBoardValue);
     // обработчик клавиш на клавиатуре
     useEffect(() => {
         if (keyBoardValue) {
-            console.log('entry');
-            console.log(keyBoardValue);
             // const keyBoardAll = document.querySelectorAll('[data-keyboardvalue]');
             // console.log("keyBoardAll", keyBoardAll);
             const dataKeyBoard = document.querySelector(`[data-keyboardvalue=${keyBoardValue}]`);
-            console.log(dataKeyBoard);
             if (dataKeyBoard) {
                 dataKeyBoard.classList.add('press');
                 setTimeout(() => {
