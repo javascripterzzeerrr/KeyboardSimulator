@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+.window_welcome {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../img/backround.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.wrapper_welcome {
+    font-family: 'Silkscreen', cursive;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_welcome {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome_welcome {
+    font-size: 35px;
+}
+
+.click_welcome {
+    margin: 20px 0 0 0;
+    font-size: 30px;
+}
+
+.rainbow_welcome {
+    font-weight: bold;
+}
